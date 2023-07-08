@@ -1,0 +1,98 @@
+.hero-section {
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+  }
+  main {
+    margin-bottom: var(--section-margin);
+    .image {
+      margin-bottom: 20px;
+    }
+    .text-wrapper {
+      @media (min-width: 992px) {
+        display: flex;
+        .p-wrapper {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      h1 {
+        margin-bottom: 20px;
+        @media (min-width: 992px) {
+          flex: 1;
+          margin-right: 30px;
+        }
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      button {
+        padding: 20px 40px;
+        background-color: var(--soft-red);
+        border: none;
+        color: var(--off-white);
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        @media (min-width: 992px) {
+          width: fit-content;
+          &:hover {
+            background-color: var(--very-dark-blue);
+            color: var(--off-white);
+            cursor: pointer;
+            transition: all;
+            transition-duration: 300ms;
+          }
+        }
+      }
+    }
+  }
+  aside {
+    padding: 20px;
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
+    margin-bottom: var(--section-margin);
+    @media (min-width: 992px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    h1 {
+      color: var(--soft-orange);
+      margin-bottom: 30px;
+      @media (min-width: 992px) {
+        font-size: 2.5rem;
+      }
+    }
+    .topics {
+      &__topic {
+        border-bottom: solid var(--grayish-blue) 1px;
+        margin-bottom: 40px;
+        h2 {
+          margin-bottom: 10px;
+          @media (min-width: 992px) {
+          &:hover {
+            color: var(--soft-orange);
+            cursor: pointer;
+            transition: all;
+            transition-duration: 300ms;
+          }
+        }
+        }
+        p {
+          color: var(--grayish-blue);
+          margin-bottom: 40px;
+        }
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
